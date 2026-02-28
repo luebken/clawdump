@@ -33,12 +33,6 @@ When you type `/clawdump` in OpenClaw, the agent:
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/luebken/clawdump/main/install.sh | bash
-```
-
-Or manually with git:
-
-```bash
 git clone https://github.com/luebken/clawdump ~/.openclaw/skills/clawdump
 ```
 

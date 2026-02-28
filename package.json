@@ -4,7 +4,7 @@
   "description": "Share your OpenClaw context files as a secret GitHub Gist",
   "type": "module",
   "bin": {
-    "clawdump": "./dist/index.js"
+    "clawdump": "dist/index.js"
   },
   "files": [
     "dist",

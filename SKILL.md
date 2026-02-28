@@ -13,8 +13,28 @@ npm install -g clawdump
 
 ## Usage
 
+**Step 1** — Show the user which files are available:
+
 ```bash
-clawdump
+clawdump list
 ```
 
-The CLI will guide you through selecting which files to share and upload them as a secret GitHub Gist.
+Present the output to the user and ask which files they want to share.
+
+**Step 2** — Share the files the user selected:
+
+```bash
+clawdump share <files...> --acknowledge-private-share
+```
+
+The `--acknowledge-private-share` flag is required and confirms the user has approved sharing those specific files.
+
+## Example
+
+```bash
+clawdump list
+# → shows SOUL.md, MEMORY.md, AGENTS.md
+
+clawdump share SOUL.md MEMORY.md --acknowledge-private-share
+# → https://gist.github.com/username/abc123
+```

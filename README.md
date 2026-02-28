@@ -32,16 +32,22 @@ When you type `/clawdump` in OpenClaw, the agent:
 
 ## Install
 
+**Via ClawHub** (when available):
 ```bash
 clawhub install clawdump
 ```
 
-Or manually:
-
+**Via curl** (no clawhub needed):
 ```bash
-cd ~/.openclaw/workspace/skills
-git clone https://github.com/luebken/clawdump clawdump
+curl -fsSL https://raw.githubusercontent.com/luebken/clawdump/main/install.sh | bash
 ```
+
+**Via git** (manual):
+```bash
+git clone https://github.com/luebken/clawdump ~/.openclaw/skills/clawdump
+```
+
+All three install to `~/.openclaw/skills/clawdump/` — the same directory clawhub uses — so OpenClaw picks it up automatically on next session start.
 
 ## Usage
 

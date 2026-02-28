@@ -34,6 +34,9 @@ When you type `/clawdump` in OpenClaw, the agent:
 
 ```bash
 git clone https://github.com/luebken/clawdump ~/.openclaw/skills/clawdump
+
+# or via npm
+npm install -g clawdump
 ```
 
 ## Usage

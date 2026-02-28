@@ -1,5 +1,5 @@
 {
-  "name": "@luebken/clawdump",
+  "name": "clawdump",
   "version": "0.1.0",
   "description": "Share your OpenClaw context files as a secret GitHub Gist",
   "type": "module",

@@ -8,7 +8,7 @@ description: Share OpenClaw context files as a secret GitHub Gist using the claw
 ## Setup
 
 ```bash
-npm install -g @luebken/clawdump
+npm install -g clawdump
 ```
 
 ## Usage

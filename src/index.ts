@@ -113,8 +113,7 @@ function cmdShare(args: string[]) {
   const gistUrl = result.stdout.trim();
   const gistId = gistUrl.split("/").pop();
 
-  console.log(`\nGist:   ${gistUrl}`);
-  console.log(`Viewer: https://luebken.github.io/clawdump/#${gistId}`);
+  console.log(`\nShared: https://luebken.github.io/clawdump/#${gistId}`);
   console.log("Only people with the link can view it.");
 }
 

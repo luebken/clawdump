@@ -9,7 +9,7 @@ function renderLanding() {
     <main>
       <div class="landing">
         <p>To create your own dump, install the skill:</p>
-        <pre>git clone https://github.com/luebken/clawdump ~/.openclaw/skills/clawdump</pre>
+        <p>Install the skill <a href="https://github.com/luebken/clawdump" target="_blank">github.com/luebken/clawdump</a></p>
       </div>
     </main>
   `;

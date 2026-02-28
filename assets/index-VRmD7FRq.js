@@ -60,8 +60,6 @@ Please report this to https://github.com/markedjs/marked.`,n){const r="<p>An err
     </header>
     <main>
       <div class="landing">
-        <p>To view a dump, open a link shared with you:</p>
-        <code>luebken.github.io/clawdump/#&lt;gistId&gt;</code>
         <p>To create your own dump, install the skill:</p>
         <pre>git clone https://github.com/luebken/clawdump ~/.openclaw/skills/clawdump</pre>
       </div>

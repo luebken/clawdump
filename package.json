@@ -1,0 +1,36 @@
+{
+  "name": "@luebken/clawdump",
+  "version": "0.1.0",
+  "description": "Share your OpenClaw context files as a secret GitHub Gist",
+  "type": "module",
+  "bin": {
+    "clawdump": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "SKILL.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --clean",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.0.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "openclaw",
+    "skill",
+    "gist",
+    "cli"
+  ],
+  "license": "MIT"
+}

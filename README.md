@@ -67,5 +67,5 @@ All gists are created as **secret** — not listed publicly, only accessible via
 
 ## Roadmap
 
-- **Milestone 1** (now): Skill + GitHub Gist upload, installed via GitHub URL
+- ✅ **Milestone 1**: Skill + GitHub Gist upload, installed via GitHub URL
 - **Milestone 2**: Web viewer at `clawdump.dev` — render shared gists beautifully

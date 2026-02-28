@@ -5,18 +5,12 @@ description: Share OpenClaw context files as a secret GitHub Gist using the claw
 
 # clawdump
 
-## Setup
-
-```bash
-npm install -g clawdump
-```
-
 ## Usage
 
 **Step 1** — List available files and show them to the user:
 
 ```bash
-clawdump list
+npx clawdump@latest list
 ```
 
 **Step 2** — Ask the user explicitly:
@@ -29,7 +23,7 @@ Do not proceed until the user has confirmed both. Use their exact words as confi
 **Step 3** — Only after the user has explicitly acknowledged, share the files they selected:
 
 ```bash
-clawdump share <files...> --acknowledge-private-share
+npx clawdump@latest share <files...> --acknowledge-private-share
 ```
 
 ## Example
@@ -43,6 +37,6 @@ Agent:  Here are your context files:
 
 User:   Share SOUL.md and MEMORY.md. I acknowledge they are private.
 
-Agent:  $ clawdump share SOUL.md MEMORY.md --acknowledge-private-share
-        → https://gist.github.com/username/abc123
+Agent:  $ npx clawdump@latest share SOUL.md MEMORY.md --acknowledge-private-share
+        → https://luebken.github.io/clawdump/#abc123
 ```

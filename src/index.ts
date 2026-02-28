@@ -110,7 +110,11 @@ function cmdShare(args: string[]) {
     process.exit(1);
   }
 
-  console.log(`\nShared: ${result.stdout.trim()}`);
+  const gistUrl = result.stdout.trim();
+  const gistId = gistUrl.split("/").pop();
+
+  console.log(`\nGist:   ${gistUrl}`);
+  console.log(`Viewer: https://luebken.github.io/clawdump/#${gistId}`);
   console.log("Only people with the link can view it.");
 }
 

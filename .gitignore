@@ -1,2 +1,4 @@
 node_modules/
 dist/
+website/node_modules/
+website/dist/

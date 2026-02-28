@@ -12,7 +12,7 @@ When you type `/clawdump` in OpenClaw, the agent:
 4. Uploads the selected files to a **secret** GitHub Gist
 5. Returns the Gist URL
 
-## Context files shared
+## Context files
 
 | File | Purpose |
 |------|---------|
@@ -32,22 +32,15 @@ When you type `/clawdump` in OpenClaw, the agent:
 
 ## Install
 
-**Via ClawHub** (when available):
-```bash
-clawhub install clawdump
-```
-
-**Via curl** (no clawhub needed):
 ```bash
 curl -fsSL https://raw.githubusercontent.com/luebken/clawdump/main/install.sh | bash
 ```
 
-**Via git** (manual):
+Or manually with git:
+
 ```bash
 git clone https://github.com/luebken/clawdump ~/.openclaw/skills/clawdump
 ```
-
-All three install to `~/.openclaw/skills/clawdump/` — the same directory clawhub uses — so OpenClaw picks it up automatically on next session start.
 
 ## Usage
 
@@ -61,14 +54,7 @@ In an OpenClaw session:
 
 All gists are created as **secret** — not listed publicly, only accessible via the direct URL. Review file contents before sharing, especially `MEMORY.md` and `USER.md` which may contain personal information.
 
-## Publish to ClawHub
-
-```bash
-clawhub login
-clawhub publish . --slug clawdump --name "ClawDump" --version 1.0.0 --changelog "Initial release" --tags latest
-```
-
 ## Roadmap
 
-- **Milestone 1** (now): Skill + GitHub Gist upload
-- **Milestone 2**: Web viewer at `clawdump.dev` — render shared gists beautifully, like pi.dev/session/
+- **Milestone 1** (now): Skill + GitHub Gist upload, installed via GitHub URL
+- **Milestone 2**: Web viewer at `clawdump.dev` — render shared gists beautifully

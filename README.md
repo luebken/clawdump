@@ -28,7 +28,21 @@ When you type `/clawdump` in OpenClaw, the agent:
 ## Requirements
 
 - [OpenClaw](https://openclaw.ai) with skills support
-- [GitHub CLI](https://cli.github.com) (`gh`) installed and authenticated (`gh auth login`)
+- [GitHub CLI](https://cli.github.com) (`gh`) installed and authenticated
+
+### Setting up gh
+
+Install the GitHub CLI from [cli.github.com](https://cli.github.com), then authenticate with the `gist` scope:
+
+```bash
+gh auth login --hostname github.com --git-protocol https --scopes "gist,repo"
+```
+
+Verify it works:
+
+```bash
+gh auth status
+```
 
 ## Install
 

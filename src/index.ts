@@ -9,7 +9,7 @@ import {
   spinner,
 } from "@clack/prompts";
 import { spawnSync } from "node:child_process";
-import { existsSync, statSync } from "node:fs";
+import { existsSync, readdirSync, statSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
@@ -22,7 +22,6 @@ const CONTEXT_FILES = [
   { name: "TOOLS.md", description: "Tool configuration" },
   { name: "HEARTBEAT.md", description: "Heartbeat / autonomous behavior" },
   { name: "BOOTSTRAP.md", description: "Bootstrap instructions" },
-  { name: "memory.md", description: "Memory (alt)" },
 ];
 
 function resolveWorkspaceDir(): string {
@@ -49,6 +48,9 @@ async function main() {
   const existingFiles = CONTEXT_FILES.flatMap((f) => {
     const filePath = path.join(workspaceDir, f.name);
     if (!existsSync(filePath)) return [];
+    // Verify the exact filename to avoid macOS case-insensitive FS false positives
+    const dir = readdirSync(workspaceDir);
+    if (!dir.includes(f.name)) return [];
     const size = statSync(filePath).size;
     return [{ ...f, filePath, size }];
   });
